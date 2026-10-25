@@ -15,6 +15,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 add_executable(${PROJECT_NAME} 
     ${SRC}/main.c
     ${SRC}/linkedlist/linkedlist.c
+    ${SRC}/process/processwrapper.c
 )
 
 target_link_libraries(${PROJECT_NAME}
