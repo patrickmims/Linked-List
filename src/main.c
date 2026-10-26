@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include "ds.h"
 #include "linkedlist.h"
 
 // #include "linkedlist.h'
@@ -15,12 +12,11 @@
 
 int main(int argc, char **argv)
 {
-    struct Node ll;
-    struct Node *linkedlist = NULL;
-
-    linkedlist = &ll;
+    pid_t process;
 
     puts("Linkedlist...");
+
+    create_process(process);
      
     return 0;
 }

@@ -16,6 +16,7 @@ add_executable(${PROJECT_NAME}
     ${SRC}/main.c
     ${SRC}/linkedlist/linkedlist.c
     ${SRC}/process/processwrapper.c
+    ${SRC}/thread/threadwrapper.c
 )
 
 target_link_libraries(${PROJECT_NAME}
