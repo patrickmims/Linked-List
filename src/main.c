@@ -1,7 +1,13 @@
 #include "ds.h"
 #include "linkedlist.h"
 
-// #include "linkedlist.h'
+int main(int argc, char **argv)
+{
+    pid_t process;
+    create_process(process); // <= start a new process
+
+    return 0;
+}
 
 // covalent bond
 // ionic bond
@@ -9,14 +15,3 @@
 // molecular compound
 // non polar covalent bond
 // polar covalent bond
-
-int main(int argc, char **argv)
-{
-    pid_t process;
-
-    puts("Linkedlist...");
-
-    create_process(process);
-     
-    return 0;
-}

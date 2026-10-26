@@ -14,6 +14,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 add_executable(${PROJECT_NAME} 
     ${SRC}/main.c
+    ${SRC}/io/requesthttp.c
     ${SRC}/linkedlist/linkedlist.c
     ${SRC}/process/processwrapper.c
     ${SRC}/thread/threadwrapper.c

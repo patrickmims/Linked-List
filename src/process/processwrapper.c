@@ -22,19 +22,18 @@ void modifyMe(datastructures_t *d)
 
 void *get_json(void *ptr)
 {
-    datastructures_t *p= (datastructures_t * )ptr;  // <= Cast before using
-    p->linkedlist.data = 430; // <= Test data - and it works!
-    puts("get_json()");
-    printf("get_json() -> %d\n", p->linkedlist.data);
+    datastructures_t *p = (datastructures_t * )ptr;  // <= Cast before using
+    p->linkedlist.data = 5000; // <= Test data - and it works!
+    printf("get_json() [ %d ]\n", p->linkedlist.data);
 }
 
 void create_process(pid_t process)
 {
     datastructures_t *list = &l; // Create a pointer to the reference above
-    
+
     // Crete a function pointer to get_json(), which takes one param
     void *(*fn)(void *) = get_json;  // This runs in the background
-     
+
     // Determine if the process is successful
     switch(process = fork())
     {
