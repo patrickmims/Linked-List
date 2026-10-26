@@ -3,7 +3,7 @@
 
 datastructures_t l; // create a reference to
 
-FILE *process_error_log()
+FILE *process_error_log() // <= error
 {
     FILE *filePtr = NULL; 
 
@@ -20,12 +20,16 @@ void modifyMe(datastructures_t *d)
     printf("What's in this function: %d\n", d->stack.ptr);
 }
 
-void *get_json(void *ptr)
+/* ------------------------------------------------ void get_json(void *) */
+
+void *get_json(void *ptr) // <= function that runs in the thread
 {
     datastructures_t *p = (datastructures_t * )ptr;  // <= Cast before using
     p->linkedlist.data = 5000; // <= Test data - and it works!
     printf("get_json() [ %d ]\n", p->linkedlist.data);
 }
+
+/* ------------------------------------------- void create_process(pid_t) */
 
 void create_process(pid_t process)
 {
