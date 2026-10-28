@@ -22,8 +22,19 @@ void modifyMe(datastructures_t *d)
 
 /* ------------------------------------------------ void get_json(void *) */
 
+// passed the linked list from create_process to get_json
+
 void *get_json(void *ptr) // <= function that runs in the thread
 {
+    char template[] = "/tmp/testXXXXXX";
+
+    /* create a temp file, located in: /tmp/ */
+
+    int fd;
+
+    if((fd = mkstemp(template)) < 0)
+        fprintf(process_error_log(), "Error: get_json()");
+
     datastructures_t *p = (datastructures_t * )ptr;  // <= Cast before using
     p->linkedlist.data = 5000; // <= Test data - and it works!
     printf("get_json() [ %d ]\n", p->linkedlist.data);
